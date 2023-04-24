@@ -8,16 +8,16 @@ import com.spring.orm.entities.Student;
 
 public class StudentDao {
 
-	private HibernateTemplate hibernatetemplate;
+	private HibernateTemplate hibernateTemplate;
 	 	
 
-	public HibernateTemplate getHibernatetemplate() {
-		return hibernatetemplate;
+	public HibernateTemplate getHibernateTemplate() {
+		return hibernateTemplate;
 	}
 
 
-	public void setHibernatetemplate(HibernateTemplate hibernatetemplate) {
-		this.hibernatetemplate = hibernatetemplate;
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
 	}
 
 
@@ -25,7 +25,7 @@ public class StudentDao {
 	@Transactional
 	public int insert(Student student) {
 
-		int i = (Integer) this.hibernatetemplate.save(student);
+		int i = (Integer) this.hibernateTemplate.save(student);
 		return i;
 	}
 

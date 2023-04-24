@@ -16,7 +16,7 @@ public class App
     {
         System.out.println( "start process..." );
         ApplicationContext context=new ClassPathXmlApplicationContext("com/spring/orm/config.xml");
-        StudentDao studentDao= context.getBean("StudentDao",StudentDao.class);
+        StudentDao studentDao= context.getBean("studentDao",StudentDao.class);
         Student student=new Student(111,"mahesh","nagpur");
         int r=studentDao.insert(student);
         System.out.println("done "+r);

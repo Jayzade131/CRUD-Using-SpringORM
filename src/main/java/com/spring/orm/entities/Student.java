@@ -1,10 +1,11 @@
 package com.spring.orm.entities;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Entity;
+
 
 @Entity
 @Table(name="student_details")

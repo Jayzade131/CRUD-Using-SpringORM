@@ -37,19 +37,19 @@
 			</list>
 		</property>
 	</bean>
-
+   
 	<bean class="org.springframework.orm.hibernate5.HibernateTemplate"
-		name="hibernatetemplate">
+		name="hibernateTemplate">
 
 		<property name="sessionFactory" ref="factory"></property>
 	</bean>
 
 
-	<bean class="com.spring.orm.dao" name="StudentDao">
-		<property name="hibernateTemplate" ref="hibernatetemplate"></property>
+	<bean class="com.spring.orm.dao.StudentDao" name="studentDao">
+		<property name="hibernateTemplate" ref="hibernateTemplate"></property>
 	</bean>
 	
-	<bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" name="transationManager">
+	<bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" name="transactionManager">
 	<property name="sessionFactory" ref="factory"></property>
 	</bean>
 
